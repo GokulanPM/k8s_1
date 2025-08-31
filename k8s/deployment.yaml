@@ -6,23 +6,23 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: flask
+      app: flask-app    # Changed to match service selector
   template:
     metadata:
       labels:
-        app: flask
+        app: flask-app  # Changed to match service selector
     spec:
       containers:
       - name: flask-container
-        image: goku0123/myapp
+        image: goku0123/myapp:latest  # Added tag
         ports:
         - containerPort: 5000
         env:
-        - name: MYSQL_HOST
+        - name: DB_HOST   # Changed to match app.py variables
           value: mysql
-        - name: MYSQL_USER
+        - name: DB_USER   # Changed to match app.py variables
           value: root
-        - name: MYSQL_PASSWORD
+        - name: DB_PASSWORD  # Changed to match app.py variables
           value: root
-        - name: MYSQL_DB
+        - name: DB_NAME    # Changed to match app.py variables
           value: flaskdb
