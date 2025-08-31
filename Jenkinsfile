@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')  // set in Jenkins
-        DOCKER_IMAGE = "goku0123/myapp"
+        DOCKER_IMAGE = "goku0123/myapp:latest"
     }
 
     stages {
