@@ -30,7 +30,7 @@ pipeline {
 
         stage('Deploy to Kubernetes') {
             steps {
-                bat "kubectl set image deployment/flask-app flask-container=${DOCKER_IMAGE}:${BUILD_NUMBER} --record"
+                bat "kubectl set image deployment/flask-app flask-app=${DOCKER_IMAGE}:${BUILD_NUMBER} --record"
             }
         }
     }

@@ -13,8 +13,8 @@ spec:
         app: flask
     spec:
       containers:
-      - name: flask-container
-        image: goku0123/flask-app:latest
+      - name: flask-app
+        image: goku0123/myapp:latest
         ports:
         - containerPort: 5000
         env:
