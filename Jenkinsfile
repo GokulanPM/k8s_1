@@ -10,6 +10,7 @@ pipeline {
         steps {
             git branch: 'main', url: 'https://github.com/GokulanPM/k8s_1.git'
         }
+    }
 
 
         stage('Build Docker Image') {
