@@ -6,12 +6,12 @@ pipeline {
         DOCKER_IMAGE = "goku0123/myapp"
     }
 
-    stage('Checkout Code') {
-        steps {
-            git branch: 'main', url: 'https://github.com/GokulanPM/k8s_1.git'
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/GokulanPM/k8s_1.git'
+            }
         }
-    }
-
 
         stage('Build Docker Image') {
             steps {
